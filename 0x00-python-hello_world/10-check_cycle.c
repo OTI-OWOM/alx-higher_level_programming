@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  *check_cycle - check for loop in LL
  *@list:head of linked list
@@ -9,7 +10,7 @@
 
 int check_cycle(listint_t *list)
 {
-	listint *slow *fast;
+	listint_t *slow, *fast;
 
 	if(!list)
 	{
