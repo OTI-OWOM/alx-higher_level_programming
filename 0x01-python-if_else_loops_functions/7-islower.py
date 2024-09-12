@@ -2,8 +2,7 @@
 def islower(c):
 
 
-    for c in range(97, 122):
-        if c == 99:
+     if c >= 97 and c <= 122:
             return True
         else:
             return False
