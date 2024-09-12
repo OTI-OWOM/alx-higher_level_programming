@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  *insert_node - inserts a number into a sorted singly linked list
@@ -12,17 +14,17 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 listint_t *node = *head, *new;
-new = malloc(sizeof(linstint_t));
+new = malloc(sizeof(listint_t));
 
-if (new == NULL){
-return NULL
-}
+if (new == NULL)
+return NULL;
 
-new-> = number;
+
+new->n = number;
 
 if (node == NULL || node->n >= number)
 {
-new-next = number;
+new->next = node;
 *head = new;
 return (new);
 
@@ -34,6 +36,6 @@ node = node->next;
 new->next = node->next;
 node->next = new;
 
-return(new);
+return (new);
 
 }
