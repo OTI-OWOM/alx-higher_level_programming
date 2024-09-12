@@ -6,5 +6,5 @@ def print_tebahpla():
         if i % 2 == 0:
             result += '{}'.format(chr(122 - i))
         else:
-            result += '{}'.format(chr(89 - i))
+            result += '{}'.format(chr(90 - i))
     print(result, end="")
