@@ -1,4 +1,10 @@
 #!/usr/bin/python3
 
-def print_alternating_alphabet():
-    print(''.join(chr(122 - i) if i % 2 == 0 else chr(89 - i) for i in range(26)), end="")
+def print_tebahpla():
+    result = ''
+    for i in range(26):
+        if i % 2 == 0:
+            result += '{}'.format(chr(122 - i))
+        else:
+            result += '{}'.format(chr(89 - i))
+    print(result, end="")
