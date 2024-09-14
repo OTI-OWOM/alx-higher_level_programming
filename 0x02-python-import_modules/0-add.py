@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if _import_ == "_main_"
+if _import_ == "_main_":
 
 from add_0 import add
     
