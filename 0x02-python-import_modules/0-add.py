@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+if _import_ == "_main_"
 
-
-from add_0 import def add(a, b):
+from add_0 import add
     
-    a = 1:
-    b = 2:
-    result = add (1 + 2):
-    print("{} +{} = {}".format(a,b,result))
+    a = 1
+    b = 2
+
+    print("{} +{} = {}".format(a, b, add(a, b)))
