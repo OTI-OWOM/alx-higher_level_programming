@@ -4,13 +4,13 @@ if __name__ == "__main_":
 
     import sys
 
-    number = len(sys.argv) - 1
-    if number == 0:
-        print("0 argument.")
+    count = len(sys.argv) - 1
+    if count == 0:
+        print("0 arguments.")
 
-    elif number == 1:
-        print("1 arguments:")
+    elif count == 1:
+        print("1 argument:")
     else:
-        print("{} arguments:".format(number))
-    for i in range(number):
+        print("{} arguments:".format(count))
+    for i in range(count):
         print("{}: {}".format(i + 1, sys.argv[i + 1]))
