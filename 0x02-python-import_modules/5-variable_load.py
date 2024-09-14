@@ -4,5 +4,5 @@ if __name__ == "__main__"
     import variable_load_5
     
         a = 98
-             print("{}".format.(a))
+    print("{}".format.(a))
 
