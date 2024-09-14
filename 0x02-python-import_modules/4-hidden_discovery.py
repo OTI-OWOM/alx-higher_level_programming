@@ -11,5 +11,5 @@ if __name__ == "__main__":
     sorted_names = sorted(non_hidden_names)
 
         for  name in sorted names:
-            print(name )
+            print(name)
 
