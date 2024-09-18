@@ -29,31 +29,31 @@ int is_palindrome(listint_t **head)
     const listint_t *temp = *head;
     int *arr;
 
-    if (head == NULL || *head == NULL)  // Handle NULL head or empty list
+    if (head == NULL || *head == NULL)
         return (1);
 
-    // Count the length of the list
+
     while (temp)
     {
         temp = temp->next;
         len++;
     }
 
-    // Create an array to store the list values
+
     arr = malloc(sizeof(int) * len);
     if (!arr)
-        return (0);  // Memory allocation failed
+        return (0);
 
     temp = *head;
 
-    // Copy the list values into the array
+
     for (i = 0; i < len; i++)
     {
         arr[i] = temp->n;
         temp = temp->next;
     }
 
-    // Check if the list is a palindrome
+
     if (pal(arr, 0, len - 1) == 1)
     {
         free(arr);
