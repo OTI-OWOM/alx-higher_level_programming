@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 def number_keys(a_dictionary):
-    k = number_keys(a_dictionary)
-    for k in a_dictionay:
-        print("number_keys: {:d}".format(k))
+    count = 0
+    for k in a_dictionary:
+        count += 1
+    return count
