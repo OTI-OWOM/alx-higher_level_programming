@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
         current_value = roman_values.get(roman_string[i], 0)
 
         if i + 1 < length and roman_values.get(roman_string[i + 1], 0) \
-              > current_value:
+             > current_value:
 
             result -= current_value
         else:
