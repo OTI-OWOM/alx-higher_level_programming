@@ -15,5 +15,5 @@ class Student:
         if isinstance(attrs, list) and \
                 (all(isinstance(s, str) for s in attrs)):
             return {k: v for k, v in dict(self.__dict__).items() if k in attrs}
- 
+
         return self.__dict__
