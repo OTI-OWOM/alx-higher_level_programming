@@ -1,3 +1,3 @@
 #!/bin/bash
-# Script to display HTTP methods supported by a server
-curl -sI -X OPTIONS http://localhost:5000 | grep -i "allow:" | cut -d: -f2 | tr -d ' ' | tr ',' '\n'
+# This script takes in a URL and displays all HTTP methods the server will accept.
+curl -Is "$1" | grep "Allow:" | cut -d ":" -f 2 | cut -c 2- | rev | cut -c 2- | rev
