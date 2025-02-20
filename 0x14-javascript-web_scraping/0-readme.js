@@ -15,10 +15,10 @@ if (!filePath) {
 // Read thr file in UTF-8 encoding
 fs.readFile(filePath, 'utf-8', (err, data) => {
   if (err) {
-// Print the error object if an error occurs
+    // Print the error object if an error occurs
     console.error(err);
   } else {
-// print the file content
+    // print the file content
     console.log(data);
   }
 });
