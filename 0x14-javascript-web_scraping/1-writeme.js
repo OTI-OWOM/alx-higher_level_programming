@@ -1,20 +1,25 @@
 #!/usr/bin/node
 
 const fs = require('fs');
+const process = require('process');
 
-// check if the file path argument and string to write is provided
-if (process.argv.length < 4) {
-  console.error('Usage: node <script-file> <file-path> <string-to-write>');
+// Get the file path and string from the arguments
+const filePath = process.argv[2];
+const content = process.argv[3];
+
+// Check if both file path and content are provided
+if (!filePath || !content) {
+  console.error('Usage: node 1-writeme.js <file_path> "<string_to_write>"');
   process.exit(1);
 }
 
-// Get the file path and string from command line arguments
-const filePath = process.argv[2];
-const string = process.argv[3];
-
-// Read the file in UTF-8 encoding
-fs.writeFile(filePath, string, 'utf-g', (err) => {
+// Write the string to the file in UFT-8 encoding
+fs.writeFile(filePath, content, 'utf-8', (err) => {
   if (err) {
+    // Print the error object if an error occurs
     console.error(err);
+  } else {
+    // Print a sucess message
+    console.log('String written to ' + filePath);
   }
 });
