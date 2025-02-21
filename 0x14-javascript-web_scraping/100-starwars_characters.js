@@ -15,8 +15,10 @@ request.get(apiUrl, (error, response, body) => {
   try {
     // Parse the JSON response
     const todos = JSON.parse(body);
+
     // Create an object to store the counts of completed tasks by user ID
     const completedTasksByUser = {};
+
     // Filter and count completed tasks
     todos.forEach((todo) => {
       if (todo.completed) {
@@ -27,7 +29,7 @@ request.get(apiUrl, (error, response, body) => {
         }
       }
     });
-    // Print the number of completed tasks by each user
+    // Print the number of completed task by each user
     console.log(completedTasksByUser);
     // console.log(JSON.stringify(completedTasksByUser, null, 2));
   } catch (parseError) {
